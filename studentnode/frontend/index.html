@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    }
+    
+    .navbar{
+        height: 8vh;
+        width: 100%;
+        background-color: rgb(211, 217, 253);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: rgb(4, 6, 116);
+    }
+    .navbar button{
+        padding:  10%;
+        width: 120px;
+        border: none;
+        background-color: rgb(3, 0, 124);
+        border-radius: 4px;
+        color: aliceblue;
+        font-weight: 600;
+    }
+    .container{
+            height: 92vh;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            gap: 18px;
+            background-color: rgb(248, 245, 245);
+            padding: 2% 1%;
+        }
+        .content{
+            padding: 1%;
+            height: 280px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+            background-color: rgb(165, 187, 199);
+        }
+        .content:hover{
+            box-shadow: #fae38e83 0px 5px 15px;
+            background-color: rgb(182, 207, 221);
+            transition: 0.3s;
+        }
+
+        .content table td,th{
+            padding-bottom: 3%;
+            font-size: 1em;
+        }
+        input{
+            padding-left: 5px;
+            width: 200px;
+            height: 28px;
+            box-shadow: 1px 4px 8px 2px rgba(9, 66, 48, 0.25), 1px 0px 0px 1px rgba(9, 66, 57, 0.08);   
+            background-color: #fefeff;
+            border: none;
+            margin-left: 20px;
+            border-radius: 4px;
+        }
+        input:focus{    
+            outline: none;
+        }
+        .content button{
+            padding: 1.5% 5%;
+            border-radius: 4px;
+            border: none;
+            margin: 5px;
+            font-weight: 600;
+        }
+        #edit{
+            border:2px solid #1d4ba7;
+        }
+        #save {
+            border:2px solid #1c7c39;
+        }
+        #delete {
+            border:2px solid #af111c;
+        }
+        #edit:hover{
+            background-color: #1d4ba7;
+            color: white;
+            transition: 0.3s;
+        }
+        #save:hover{
+            background-color: #1c7c39;
+            color: white;
+            transition: 0.3s;
+        }
+        #delete:hover{
+            background-color: #af111c;
+            color: white;   
+            transition: 0.3s;
+        }
+        .eligibility{
+            padding: 6px 0;
+            border-radius: 4px;
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Student.Academy</h1>
+        <a href="./pages/add"><button>Add Student</button></a>
+    </div>
+    <div class="container" id="main">
+        
+        
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

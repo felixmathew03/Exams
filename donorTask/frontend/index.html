@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar{
+            height: 8vh;
+            width: 100%;
+            background-color: rgb(253, 211, 211);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: rgb(133, 9, 5);
+        }
+        .navbar button{
+            padding:  10%;
+            width: 120px;
+            border: none;
+            background-color: rgb(107, 7, 4);
+            border-radius: 4px;
+            color: aliceblue;
+            font-weight: 600;
+        }
+        .navbar h1  {
+            font-family: "Anton SC", serif;
+        }
+        .navbar button:hover{
+            background-color: rgb(161, 13, 8);
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            flex-direction: column  ;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container h1 {
+            margin-top: 3%;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        table {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 1%;
+            width: 80%;
+            border-collapse: collapse;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: rgb(251, 75, 48);
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        tr:hover {
+            background-color: #e4e4e4;
+            transition: background-color 0.3s ease;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="text"]:focus{
+            outline: none;
+        }
+        .buttons{
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+        .buttons button{
+            padding: 3%;
+            border-radius: 4px;
+        }
+        #edit{
+            border:2px solid #1d4ba7;
+        }
+        #save {
+            border:2px solid #1c7c39;
+        }
+        #delete {
+            border:2px solid #af111c;
+        }
+        #edit:hover{
+            background-color: #1d4ba7;
+            color: white;
+            transition: 0.3s;
+        }
+        #save:hover{
+            background-color: #1c7c39;
+            color: white;
+            transition: 0.3s;
+        }
+        #delete:hover{
+            background-color: #af111c;
+            color: white;   
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Donor Club</h1>
+        <a href="./pages/add"><button>Add donor</button></a>
+    </div>
+    <div class="container">
+        <h1>Donor Details</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>DOB</th>
+                    <th>Place</th>
+                    <th>Phone</th>
+                    <th>Blood Group</th>
+                    <th >Actions</th>
+                </tr>
+            </thead>
+            <tbody id="main">
+
+            </tbody>
+        </table>
+        
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
